@@ -29,6 +29,7 @@ public abstract class RegisteredUser extends GuestUser implements IPostService{
 	public String getPassword() {
 		return password;
 	}
+	//TODO pārbaudīt un enkodēt
 	public void setPassword(String password) {
 		this.password = password;
 	}
