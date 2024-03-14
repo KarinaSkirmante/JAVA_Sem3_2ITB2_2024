@@ -6,7 +6,7 @@ public abstract class RegisteredUser extends GuestUser implements IPostService{
 	
 	//1.variables
 	private String username;
-	private String nameAndSurnameOrTitle;
+	protected String nameAndSurnameOrTitle;
 	//TODO izmantot enkodešanu
 	private String password;
 	
@@ -14,9 +14,10 @@ public abstract class RegisteredUser extends GuestUser implements IPostService{
 	public String getUsername() {
 		return username;
 	}
+	//TODO aizstat atstarpi ar apakšsvītru
 	public void setUsername() {
 			this.username = super.getUserID() + "_" 
-	+ nameAndSurnameOrTitle.substring(0, 5);
+	+ nameAndSurnameOrTitle.substring(0, 5).trim();
 	}
 	public String getNameAndSurnameOrTitle() {
 		return nameAndSurnameOrTitle;
