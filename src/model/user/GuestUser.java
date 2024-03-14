@@ -31,6 +31,6 @@ public class GuestUser {
 	
 	
 	//5. other function
-	
+	//TODO nodrošināt servisa daļu GuestUser lietotajam
 
 }
