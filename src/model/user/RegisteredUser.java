@@ -18,7 +18,7 @@ public abstract class RegisteredUser extends GuestUser implements IPostService{
 	//TODO aizstat atstarpi ar apakšsvītru
 	public void setUsername() {
 			this.username = super.getUserID() + "_" 
-	+ nameAndSurnameOrTitle.substring(0, 5).trim();
+	+ nameAndSurnameOrTitle.substring(0, 8).toLowerCase().replace(" ", "");
 	}
 	public String getNameAndSurnameOrTitle() {
 		return nameAndSurnameOrTitle;
