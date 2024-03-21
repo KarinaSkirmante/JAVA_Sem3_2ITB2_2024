@@ -2,7 +2,6 @@ package model;
 
 import java.util.ArrayList;
 
-import service.MainService;
 
 public class Page {
 	//1. variables
