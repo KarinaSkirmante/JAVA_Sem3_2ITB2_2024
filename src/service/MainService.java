@@ -12,7 +12,7 @@ import model.user.RegisteredUser;
 
 public class MainService {
 
-	private static ArrayList<GuestUser> allUsers = new ArrayList<GuestUser>();
+	public static ArrayList<GuestUser> allUsers = new ArrayList<GuestUser>();
 	
 	public static void main(String[] args) {
 	
@@ -21,11 +21,12 @@ public class MainService {
 		GuestUser   gU2       = new GuestUser()           ;
 		GuestUser   gU3       = new GuestUser()           ;
 		PrivateUser pU1       = new PrivateUser("Karina", "Šķirmante", "1234");
+		PrivateUser pU2       = new PrivateUser("Hesburger", "Ēdājs", "1234");
 		BusinessUser bu1 = new BusinessUser();
 		BusinessUser bu2 = new BusinessUser("SIA Hesburger", "qwerty", "LV40003666476");
 		
 		
-		allUsers.addAll(Arrays.asList(gU1, gU2, gU3, pU1, bu1, bu2));
+		allUsers.addAll(Arrays.asList(gU1, gU2, gU3, pU1, bu1, bu2, pU2));
 		
 		
 		for(GuestUser tempU : allUsers)
@@ -94,7 +95,15 @@ public class MainService {
 			System.out.println("public posts ->" + tempP.getPublicPosts());
 		}
 		
-
+		System.out.println("-----------------------------");
+		
+		
+		
+		System.out.println("Search users->");
+		System.out.println(gU2.service.findUsers("hes"));
+		
+		System.out.println("Search pages->");
+		System.out.println(gU2.service.findPages("vent"));
 	}
 
 }

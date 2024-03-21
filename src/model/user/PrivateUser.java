@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import model.Post;
 import model.PostType;
+import service.impl.AllUserServiceImpl;
 
 public class PrivateUser extends RegisteredUser{
 	
@@ -11,7 +12,7 @@ public class PrivateUser extends RegisteredUser{
 	private ArrayList<Post> privatePosts = new ArrayList<Post>();
 	private ArrayList<Post> publicPosts = new ArrayList<Post>();
 	private ArrayList<RegisteredUser> followers = new ArrayList<RegisteredUser>();
-	
+
 	//2. get and set
 	
 	public ArrayList<Post> getPrivatePosts() {
